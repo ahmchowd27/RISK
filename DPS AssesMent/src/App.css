@@ -1,0 +1,191 @@
+/* General Container */
+.container {
+  margin: 0 auto;
+  padding: 16px;
+  max-width: 1200px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Title Styling */
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Search Bar */
+.search-bar {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .search-bar input {
+    width: 100%;
+  }
+}
+
+/* Filter Section */
+.filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.filter-dropdown {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
+
+/* Table Styling */
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+
+.student-table th,
+.student-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.student-table thead th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.student-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.student-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+  .student-table th,
+  .student-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+/* Pagination Styling */
+.react-paginate {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+}
+
+.react-paginate li {
+  margin: 4px;
+}
+
+.react-paginate a {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.react-paginate .active a {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.react-paginate a:hover {
+  background-color: #e9ecef;
+}
+
+/* Chart Containers */
+.pie-chart-container,
+.scatter-chart-container,
+.bar-chart-container {
+  margin: 24px auto;
+  max-width: 100%;
+}
+
+h2.subtitle {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  h2.subtitle {
+    font-size: 18px;
+  }
+}
+
+/* Adjustments for Small Screens */
+@media (max-width: 768px) {
+  .filters {
+    grid-template-columns: 1fr;
+  }
+
+  .filters select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .pie-chart-container,
+  .scatter-chart-container,
+  .bar-chart-container {
+    margin: 16px auto;
+    height: 300px;
+  }
+}
+
+/* Adjustments for Very Small Screens */
+@media (max-width: 480px) {
+  .container {
+    padding: 8px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .search-bar input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .filters select {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .student-table th,
+  .student-table td {
+    font-size: 12px;
+  }
+
+  .react-paginate a {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+}
